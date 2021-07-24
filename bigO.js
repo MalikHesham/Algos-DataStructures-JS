@@ -23,6 +23,11 @@ O_of_n(1000);
 console.timeEnd("O_of_n");
 
 console.time("O_of_5n");
+/**
+ * Testing that the constant coefficients/constants don't matter
+ * @param {integer} n
+ * @returns {integer} the count up to 5n
+ */
 function O_of_5n(n) {
   let count = 0;
   for (let i = 0; i < n; i++) {
