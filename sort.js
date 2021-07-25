@@ -186,7 +186,7 @@ function mergeSort(array) {
 //########################################################
 
 //########################################################
-// [5] Count Sort => O(n+k)
+// [6] Count Sort => O(n+k)
 /**
  *Count sort does not compare values. It works only for numbers.
   Instead of sorting by swapping elements, this algorithm works by counting occurrences of each element in the array.
@@ -212,8 +212,37 @@ function countSort(array) {
 //########################################################
 
 //########################################################
-// [6] JavaScript Built-in Sort
+// [7] JavaScript Built-in Sort
 const comparatorNum = (a, b) => a - b;
 const sortBuiltInJS = (array) => array.sort(comparatorNum);
 
 //################### Testing Section ####################
+// testArray is an array of size 1000 containing random numbers between 0 and 1000.
+
+console.time("[1] Bubble sort");
+bubbleSort(testArray);
+console.timeEnd("[1] Bubble sort");
+
+console.time("[2] Selection sort");
+selectionSort(testArray);
+console.timeEnd("[2] Selection sort");
+
+console.time("[3] Insertion sort");
+insertionSort(testArray);
+console.timeEnd("[3] Insertion sort");
+
+console.time("[4] Quick sort");
+quickSort(testArray);
+console.timeEnd("[4] Quick sort");
+
+console.time("[5] Merge sort");
+mergeSort(testArray);
+console.timeEnd("[5] Merge sort");
+
+console.time("[6] Count sort");
+countSort(testArray);
+console.timeEnd("[6] Count sort");
+
+console.time("[7] JS built-in sort");
+sortBuiltInJS(testArray);
+console.timeEnd("[7] JS built-in sort");
